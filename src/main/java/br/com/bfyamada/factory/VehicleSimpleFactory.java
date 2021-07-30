@@ -1,14 +1,14 @@
 package main.java.br.com.bfyamada.factory;
 
-import main.java.br.com.bfyamada.model.parts.engine.Engine;
-import main.java.br.com.bfyamada.model.Vehicle;
-import main.java.br.com.bfyamada.model.impl.Car;
-import main.java.br.com.bfyamada.model.impl.Motorcycle;
-import main.java.br.com.bfyamada.model.parts.transmission.Transmission;
+import main.java.br.com.bfyamada.model.parts.engine.AbstractEngine;
+import main.java.br.com.bfyamada.model.vehicle.Vehicle;
+import main.java.br.com.bfyamada.model.vehicle.impl.Car;
+import main.java.br.com.bfyamada.model.vehicle.impl.Motorcycle;
+import main.java.br.com.bfyamada.model.parts.transmission.AbstractTransmission;
 
 public class VehicleSimpleFactory {
 
-    public static Vehicle createVehicle(String type, Engine engine, Transmission transmission){
+    public static Vehicle createVehicle(String type, AbstractEngine engine, AbstractTransmission transmission){
 
         Vehicle vehicle = null;
 

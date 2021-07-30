@@ -1,8 +1,6 @@
 package main.java.br.com.bfyamada.model.parts.engine;
 
-import main.java.br.com.bfyamada.model.parts.engine.Engine;
-
-public class MotorcycleEngine extends Engine {
+public class MotorcycleEngine extends AbstractEngine {
     public MotorcycleEngine(String power, String brand) {
         super(power, brand);
     }

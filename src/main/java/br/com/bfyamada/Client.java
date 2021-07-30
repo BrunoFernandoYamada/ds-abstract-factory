@@ -1,11 +1,11 @@
 package main.java.br.com.bfyamada;
 
-import main.java.br.com.bfyamada.factory.CarPartsAbstractFactory;
-import main.java.br.com.bfyamada.factory.VehiclePartsAbstractFactory;
+import main.java.br.com.bfyamada.abstractFactory.CarPartsAbstractFactory;
+import main.java.br.com.bfyamada.abstractFactory.VehiclePartsAbstractFactory;
 import main.java.br.com.bfyamada.factory.VehicleSimpleFactory;
-import main.java.br.com.bfyamada.model.parts.engine.Engine;
-import main.java.br.com.bfyamada.model.Vehicle;
-import main.java.br.com.bfyamada.model.parts.transmission.Transmission;
+import main.java.br.com.bfyamada.model.parts.engine.AbstractEngine;
+import main.java.br.com.bfyamada.model.vehicle.Vehicle;
+import main.java.br.com.bfyamada.model.parts.transmission.AbstractTransmission;
 
 public class Client {
 
@@ -17,8 +17,8 @@ public class Client {
         System.out.println("Creating and running with a Car : ");
 
         //example - use of abstract factory
-        Engine carEngine = carPartsFactory.constructEngine("V8", "Wolkswagem");
-        Transmission carTransmission = carPartsFactory.constructTransmission("Carrozeria", "5");
+        AbstractEngine carEngine = carPartsFactory.constructEngine("V8", "Wolkswagem");
+        AbstractTransmission carTransmission = carPartsFactory.constructTransmission("Carrozeria", "5");
 
         // FactoryMethod
         Vehicle carro = VehicleSimpleFactory.createVehicle("car", carEngine, carTransmission);
@@ -28,8 +28,8 @@ public class Client {
         System.out.println("Creating and running with a Motorcycle : ");
 
         //example - use of abstract factory
-        Engine motorcycleEngine = carPartsFactory.constructEngine("250cc", "Bross");
-        Transmission motorcycleTransmission = carPartsFactory.constructTransmission("Tyon", "4");
+        AbstractEngine motorcycleEngine = carPartsFactory.constructEngine("250cc", "Bross");
+        AbstractTransmission motorcycleTransmission = carPartsFactory.constructTransmission("Tyon", "4");
 
         // FactoryMethod
         Vehicle motorcycle = VehicleSimpleFactory.createVehicle("motorcycle", motorcycleEngine, motorcycleTransmission);

@@ -1,11 +1,11 @@
 package main.java.br.com.bfyamada.model.parts.transmission;
 
-public abstract class Transmission {
+public abstract class AbstractTransmission {
 
     private String brand;
     private String positions;
 
-    public Transmission(String brand, String positions) {
+    public AbstractTransmission(String brand, String positions) {
         this.brand = brand;
         this.positions = positions;
     }

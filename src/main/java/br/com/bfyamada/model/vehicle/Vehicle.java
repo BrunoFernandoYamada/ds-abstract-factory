@@ -1,18 +1,17 @@
-package main.java.br.com.bfyamada.model;
+package main.java.br.com.bfyamada.model.vehicle;
 
-import main.java.br.com.bfyamada.factory.CarPartsAbstractFactory;
-import main.java.br.com.bfyamada.model.parts.engine.Engine;
-import main.java.br.com.bfyamada.model.parts.transmission.Transmission;
+import main.java.br.com.bfyamada.model.parts.engine.AbstractEngine;
+import main.java.br.com.bfyamada.model.parts.transmission.AbstractTransmission;
 
 public abstract class Vehicle{
 
     private String name;
 
-    private Engine engine;
+    private AbstractEngine engine;
 
-    private Transmission transmission;
+    private AbstractTransmission transmission;
 
-    public Vehicle(String name, Engine engine, Transmission transmission){
+    public Vehicle(String name, AbstractEngine engine, AbstractTransmission transmission){
         this.name = name;
         this.engine = engine;
         this.transmission = transmission;
@@ -36,19 +35,19 @@ public abstract class Vehicle{
         this.name = name;
     }
 
-    public Engine getEngine() {
+    public AbstractEngine getEngine() {
         return engine;
     }
 
-    public void setEngine(Engine engine) {
+    public void setEngine(AbstractEngine engine) {
         this.engine = engine;
     }
 
-    public Transmission getTransmission() {
+    public AbstractTransmission getTransmission() {
         return transmission;
     }
 
-    public void setTransmission(Transmission transmission) {
+    public void setTransmission(AbstractTransmission transmission) {
         this.transmission = transmission;
     }
 }

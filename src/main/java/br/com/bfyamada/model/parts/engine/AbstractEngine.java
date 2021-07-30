@@ -1,11 +1,11 @@
 package main.java.br.com.bfyamada.model.parts.engine;
 
-public abstract class Engine {
+public abstract class AbstractEngine {
 
     private String power;
     private String brand;
 
-    public Engine(String power, String brand) {
+    public AbstractEngine(String power, String brand) {
         this.power = power;
         this.brand = brand;
     }
